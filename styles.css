@@ -1081,3 +1081,270 @@ footer .right { text-align: right; }
   footer .right { text-align: center; }
   .tricycle { display: none; }
 }
+
+/* ============================================================
+   ADDITIONS — completed film + sequel CTA + email block
+   ============================================================ */
+
+/* completed badge */
+.badge.complete {
+  border-color: #4ade80;
+  color: #4ade80;
+  background: rgba(74, 222, 128, 0.05);
+}
+
+/* two-column credits split (homepage) */
+.credits-split {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
+.credits-heading {
+  font-family: 'Big Shoulders Stencil Display', sans-serif;
+  font-weight: 900;
+  font-size: 16px;
+  letter-spacing: 0.3em;
+  color: var(--blood);
+  text-transform: uppercase;
+  padding-bottom: 14px;
+  border-bottom: 2px solid var(--blood);
+  margin-bottom: 8px;
+}
+
+/* sequel teaser CTA block (homepage bottom) */
+.sequel-block {
+  padding: 140px 32px 160px;
+  background:
+    radial-gradient(ellipse at center, rgba(200, 30, 30, 0.18) 0%, transparent 70%),
+    var(--ink);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid var(--evidence);
+}
+.sequel-block::before {
+  content: 'II';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Anton', sans-serif;
+  font-size: clamp(280px, 50vw, 700px);
+  line-height: 0.8;
+  color: rgba(200, 30, 30, 0.05);
+  pointer-events: none;
+  letter-spacing: -0.05em;
+}
+.sequel-block-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* primary CTA button */
+.primary-cta {
+  display: inline-block;
+  font-family: 'Big Shoulders Stencil Display', sans-serif;
+  font-weight: 900;
+  font-size: clamp(18px, 2.4vw, 26px);
+  letter-spacing: 0.2em;
+  color: var(--ink);
+  background: var(--bone);
+  padding: 22px 44px;
+  text-decoration: none;
+  text-transform: uppercase;
+  margin-top: 12px;
+  margin-bottom: 32px;
+  transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+  border: 2px solid var(--bone);
+}
+.primary-cta:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 6px 6px 0 var(--blood);
+  background: var(--blood);
+  color: var(--bone);
+  border-color: var(--blood);
+}
+
+.sequel-meta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  color: var(--bone-dim);
+  flex-wrap: wrap;
+}
+.sequel-meta .dot-sep { color: var(--blood); }
+
+/* ============ EMAIL APPLY BLOCK (casting page) ============ */
+.apply-block {
+  padding: 140px 32px 100px;
+  text-align: center;
+  background:
+    radial-gradient(ellipse at center, rgba(212, 167, 44, 0.12) 0%, transparent 70%),
+    var(--ink);
+  border-top: 1px solid var(--evidence);
+  border-bottom: 1px solid var(--evidence);
+  position: relative;
+  overflow: hidden;
+}
+.apply-block::before {
+  content: '✉';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: clamp(280px, 45vw, 600px);
+  line-height: 1;
+  color: rgba(212, 167, 44, 0.04);
+  pointer-events: none;
+}
+
+.apply-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.apply-eyebrow {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5em;
+  color: var(--piss);
+  margin-bottom: 24px;
+}
+
+.apply-title {
+  font-family: 'Anton', sans-serif;
+  font-size: clamp(60px, 11vw, 140px);
+  line-height: 0.9;
+  letter-spacing: -0.02em;
+  color: var(--bone);
+  text-shadow:
+    4px 4px 0 rgba(212, 167, 44, 0.5),
+    8px 8px 0 rgba(0, 0, 0, 0.3);
+  margin-bottom: 24px;
+}
+
+.apply-lede {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-size: clamp(17px, 2vw, 22px);
+  color: var(--bone-dim);
+  max-width: 620px;
+  margin: 0 auto 56px;
+  line-height: 1.55;
+}
+
+/* the actual email card */
+.email-card {
+  display: block;
+  background: var(--ink-2);
+  border: 2px solid var(--piss);
+  padding: 36px 32px;
+  text-decoration: none;
+  color: var(--bone);
+  max-width: 700px;
+  margin: 0 auto 48px;
+  transition: transform 0.25s, box-shadow 0.25s, background 0.25s;
+  position: relative;
+}
+.email-card::before,
+.email-card::after {
+  content: '';
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border: 2px solid var(--piss);
+}
+.email-card::before {
+  top: -2px;
+  left: -2px;
+  border-right: none;
+  border-bottom: none;
+}
+.email-card::after {
+  bottom: -2px;
+  right: -2px;
+  border-left: none;
+  border-top: none;
+}
+.email-card:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 6px 6px 0 var(--piss);
+  background: var(--ink);
+}
+.email-card:hover .email-action { color: var(--piss); }
+
+.email-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.4em;
+  color: var(--bone-dim);
+  margin-bottom: 16px;
+}
+
+.email-address {
+  font-family: 'Big Shoulders Stencil Display', sans-serif;
+  font-weight: 900;
+  font-size: clamp(20px, 3.6vw, 38px);
+  letter-spacing: 0.04em;
+  color: var(--bone);
+  word-break: break-all;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+.email-action {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  color: var(--bone-dim);
+  transition: color 0.25s;
+}
+
+.apply-meta {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--evidence);
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+}
+.apply-meta-item {
+  background: var(--ink);
+  padding: 20px;
+}
+.apply-meta-k {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  color: var(--piss);
+  margin-bottom: 8px;
+}
+.apply-meta-v {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  color: var(--bone);
+  line-height: 1.4;
+}
+
+@media (max-width: 880px) {
+  .credits-split { grid-template-columns: 1fr; gap: 60px; }
+  .sequel-block { padding: 100px 20px 120px; }
+  .primary-cta { padding: 18px 32px; }
+  .apply-block { padding: 100px 20px 80px; }
+  .apply-meta { grid-template-columns: 1fr; }
+}
